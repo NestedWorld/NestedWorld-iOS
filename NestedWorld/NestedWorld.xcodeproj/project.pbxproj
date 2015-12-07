@@ -81,6 +81,9 @@
 		D562BC451C15DF0900D565DD /* NestedWorld */ = {
 			isa = PBXGroup;
 			children = (
+				D562BC701C15E1B800D565DD /* Views */,
+				D562BC6E1C15E18A00D565DD /* Model */,
+				D562BC6B1C15E0FC00D565DD /* API */,
 				D562BC491C15DF0900D565DD /* AppDelegate.h */,
 				D562BC4A1C15DF0900D565DD /* AppDelegate.m */,
 				D562BC4C1C15DF0900D565DD /* ViewController.h */,
@@ -109,6 +112,75 @@
 				D562BC621C15DF0900D565DD /* Info.plist */,
 			);
 			path = NestedWorldTests;
+			sourceTree = "<group>";
+		};
+		D562BC6B1C15E0FC00D565DD /* API */ = {
+			isa = PBXGroup;
+			children = (
+				D562BC6D1C15E13500D565DD /* HttpRequest manager */,
+				D562BC6C1C15E10500D565DD /* APIRequest manager */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		D562BC6C1C15E10500D565DD /* APIRequest manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "APIRequest manager";
+			sourceTree = "<group>";
+		};
+		D562BC6D1C15E13500D565DD /* HttpRequest manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "HttpRequest manager";
+			sourceTree = "<group>";
+		};
+		D562BC6E1C15E18A00D565DD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D562BC6F1C15E1A100D565DD /* User model */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D562BC6F1C15E1A100D565DD /* User model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "User model";
+			sourceTree = "<group>";
+		};
+		D562BC701C15E1B800D565DD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D562BC731C15E21400D565DD /* HomePage view */,
+				D562BC721C15E1E100D565DD /* Register view */,
+				D562BC711C15E1C500D565DD /* Login view */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		D562BC711C15E1C500D565DD /* Login view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Login view";
+			sourceTree = "<group>";
+		};
+		D562BC721C15E1E100D565DD /* Register view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Register view";
+			sourceTree = "<group>";
+		};
+		D562BC731C15E21400D565DD /* HomePage view */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "HomePage view";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
