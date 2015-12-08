@@ -10,4 +10,19 @@
 
 @implementation Monster
 
+- (id) init:(NSString *)monsterName life:(int)hP attack:(int)aP defense:(int)dP
+{
+    self = [super init];
+    
+    if (self != nil) {
+        name = monsterName;
+        
+        healthPoint = hP;
+        attackPoint = aP;
+        defensePoint = dP;
+    }
+    
+    return self;
+}
+
 @end

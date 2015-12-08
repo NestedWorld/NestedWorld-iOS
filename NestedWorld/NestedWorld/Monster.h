@@ -8,6 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Monster : NSObject
+@interface Monster : NSObject {
+    NSString *name;
+    
+    int healthPoint;
+    
+    int attackPoint;
+    int defensePoint;
+}
 
 @end
