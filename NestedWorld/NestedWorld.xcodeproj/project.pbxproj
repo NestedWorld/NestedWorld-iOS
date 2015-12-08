@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9EF18CD8254F8E3366BC75C6 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F360C27A8461BB3C1DFCB82F /* libPods.a */; };
+		D5234C811C16A40300A75E24 /* APIRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5234C801C16A40300A75E24 /* APIRequestManager.m */; };
+		D5234C821C16A40300A75E24 /* APIRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D5234C801C16A40300A75E24 /* APIRequestManager.m */; };
 		D562BC481C15DF0900D565DD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D562BC471C15DF0900D565DD /* main.m */; };
 		D562BC4B1C15DF0900D565DD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D562BC4A1C15DF0900D565DD /* AppDelegate.m */; };
 		D562BC4E1C15DF0900D565DD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D562BC4D1C15DF0900D565DD /* ViewController.m */; };
@@ -30,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		8443F575710EE7F54D4C6869 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		D5234C7F1C16A40300A75E24 /* APIRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = APIRequestManager.h; sourceTree = "<group>"; };
+		D5234C801C16A40300A75E24 /* APIRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = APIRequestManager.m; sourceTree = "<group>"; };
 		D562BC431C15DF0900D565DD /* NestedWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NestedWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D562BC471C15DF0900D565DD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D562BC491C15DF0900D565DD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		D562BC6C1C15E10500D565DD /* APIRequest manager */ = {
 			isa = PBXGroup;
 			children = (
+				D5234C7F1C16A40300A75E24 /* APIRequestManager.h */,
+				D5234C801C16A40300A75E24 /* APIRequestManager.m */,
 			);
 			name = "APIRequest manager";
 			sourceTree = "<group>";
@@ -363,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5234C811C16A40300A75E24 /* APIRequestManager.m in Sources */,
 				D562BC4E1C15DF0900D565DD /* ViewController.m in Sources */,
 				D562BC4B1C15DF0900D565DD /* AppDelegate.m in Sources */,
 				D562BC481C15DF0900D565DD /* main.m in Sources */,
@@ -374,6 +381,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5234C821C16A40300A75E24 /* APIRequestManager.m in Sources */,
 				D562BC611C15DF0900D565DD /* NestedWorldTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
