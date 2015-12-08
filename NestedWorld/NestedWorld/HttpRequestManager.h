@@ -7,7 +7,23 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "AFNetworking.h"
 
-@interface HttpRequestManager : NSObject
+@interface HttpRequestManager : NSObject {
+    AFHTTPRequestOperationManager *manager;
+}
+
+- (void) addToHeader:(NSDictionary *)params;
+
+- (void) doGetRequest:(NSString *)url
+              success:(void (^)(NSDictionary *response))successHandler
+              failure:(void (^)(NSDictionary *error))failureHandler
+          addToHeader: (NSDictionary*)headerParams;
+
+- (void) doPostRequest:(NSString *)url
+               success:(void (^)(NSDictionary *response))successHandler
+               failure:(void (^)(NSDictionary *error))failureHandler
+                params:(NSDictionary *)params
+           addToHeader:(NSDictionary*)headerParams;
 
 @end
