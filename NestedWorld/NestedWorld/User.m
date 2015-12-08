@@ -10,4 +10,16 @@
 
 @implementation User
 
+- (id) init:(NSString *)tokenSession email:(NSString *)userEmail
+{
+    self = [super init];
+    
+    if (self != nil) {
+        token = tokenSession;
+        email = userEmail;
+    }
+    
+    return self;
+}
+
 @end

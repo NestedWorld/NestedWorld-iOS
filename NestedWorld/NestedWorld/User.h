@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 
-@interface User : NSObject
+@interface User : NSObject {
+    NSString *token;
+    
+    NSString *email;
+    NSString *nickname;
+    
+    NSString *city;
+    NSString *gender;
+    NSString *birthDate;
+    
+    BOOL isActive;
+    NSString *registerDate;
+}
 
 @end
