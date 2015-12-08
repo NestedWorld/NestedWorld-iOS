@@ -45,5 +45,28 @@
     } params:params addToHeader:nil];
 }
 
+- (void) loginRequest:(NSDictionary *)email
+             password:(NSString *)password
+                 data:(NSDictionary *)data
+              success:(void (^)(NSDictionary *))successHandler
+              failure:(void (^)(NSDictionary *))failureHandler
+{
+    NSString *url = [rootURL stringByAppendingString:@"/users/auth/login/simple"];
+    
+    NSDictionary *params = @{
+                             @"email": email,
+                             @"password": password,
+                             @"data": data,
+                             @"app_token": appToken
+                             };
+    
+    [requestManager doPostRequest:url success:^(NSDictionary *response) {
+        successHandler(response);
+    } failure:^(NSDictionary *error) {
+        failureHandler(error);
+    } params:params addToHeader:nil];
+    
+}
+
 @end
 

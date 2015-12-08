@@ -21,5 +21,10 @@
                   succes:(void (^)(NSDictionary *response))succesHandler
                  failure:(void (^)(NSDictionary *error))failureHandler;
 
+- (void) loginRequest:(NSDictionary *)email
+             password:(NSString *)password
+                 data:(NSDictionary *)data
+              success:(void (^)(NSDictionary *response))successHandler
+              failure:(void (^)(NSDictionary *error))failureHandler;
 
 @end
