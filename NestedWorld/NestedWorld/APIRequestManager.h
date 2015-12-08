@@ -27,4 +27,8 @@
               success:(void (^)(NSDictionary *response))successHandler
               failure:(void (^)(NSDictionary *error))failureHandler;
 
+- (void) logoutRequest:(NSString *)token
+               success:(void (^)(NSDictionary *))successHandler
+               failure:(void (^)(NSDictionary *))failureHandler;
+
 @end
