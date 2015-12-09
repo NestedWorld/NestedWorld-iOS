@@ -15,6 +15,7 @@
     NSString *appToken;
 }
 
+// Authentification requests
 - (void) registerRequest:(NSString *)email
                 password:(NSString *)password
                 nickname:(NSString *)nickname
@@ -30,5 +31,19 @@
 - (void) logoutRequest:(NSString *)token
                success:(void (^)(NSDictionary *))successHandler
                failure:(void (^)(NSDictionary *))failureHandler;
+
+- (void) forgotPasswordRequest:(NSString *)email
+                       success:(void (^)(NSDictionary *))successHandler
+                       failure:(void (^)(NSDictionary *))failureHandler;
+
+// User requests
+- (void) userInformationsRequest:(NSString *)token
+                         success:(void (^)(NSDictionary *))successHandler
+                         failure:(void (^)(NSDictionary *))failureHandler;
+
+// Monster requests
+- (void) monsterRequest:(void (^)(NSDictionary *))successHandler
+                failure:(void (^)(NSDictionary *))failureHandler;
+
 
 @end
