@@ -104,6 +104,24 @@
     } params:params addToHeader:nil];
 }
 
+// MARK: User requests
+- (void) userInformationsRequest:(NSString *)token
+                         success:(void (^)(NSDictionary *))successHandler
+                         failure:(void (^)(NSDictionary *))failureHandler
+{
+    NSString *url = [rootURL stringByAppendingString:@"/users/"];
+    
+    NSDictionary *headerParams = @{
+                                   @"token": token
+                                   };
+    
+    [requestManager doGetRequest:url success:^(NSDictionary *response) {
+        successHandler(response);
+    } failure:^(NSDictionary *error) {
+        failureHandler(error);
+    } addToHeader:headerParams];
+}
+
 
 @end
 

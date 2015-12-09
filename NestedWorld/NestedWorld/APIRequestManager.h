@@ -36,5 +36,10 @@
                        success:(void (^)(NSDictionary *))successHandler
                        failure:(void (^)(NSDictionary *))failureHandler;
 
+// User requests
+- (void) userInformationsRequest:(NSString *)token
+                         success:(void (^)(NSDictionary *))successHandler
+                         failure:(void (^)(NSDictionary *))failureHandler;
+
 
 @end
