@@ -41,5 +41,9 @@
                          success:(void (^)(NSDictionary *))successHandler
                          failure:(void (^)(NSDictionary *))failureHandler;
 
+// Monster requests
+- (void) monsterRequest:(void (^)(NSDictionary *))successHandler
+                failure:(void (^)(NSDictionary *))failureHandler;
+
 
 @end

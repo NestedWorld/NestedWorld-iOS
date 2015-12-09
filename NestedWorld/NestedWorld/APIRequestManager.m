@@ -122,6 +122,19 @@
     } addToHeader:headerParams];
 }
 
+// MARK: Monster requests
+- (void) monsterRequest:(void (^)(NSDictionary *))successHandler
+                failure:(void (^)(NSDictionary *))failureHandler
+{
+    NSString *url = [rootURL stringByAppendingString:@"/monsters/"];
+    
+    [requestManager doGetRequest:url success:^(NSDictionary *response) {
+        successHandler(response);
+    } failure:^(NSDictionary *error) {
+        failureHandler(error);
+    } addToHeader:nil];
+}
+
 
 @end
 
