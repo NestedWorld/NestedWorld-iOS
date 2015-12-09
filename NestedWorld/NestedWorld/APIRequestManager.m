@@ -45,7 +45,7 @@
     } params:params addToHeader:nil];
 }
 
-- (void) loginRequest:(NSDictionary *)email
+- (void) loginRequest:(NSString *)email
              password:(NSString *)password
                  data:(NSDictionary *)data
               success:(void (^)(NSDictionary *))successHandler
