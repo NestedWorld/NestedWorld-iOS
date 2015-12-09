@@ -39,7 +39,12 @@
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
 {
     // Register view
-    if ([identifier isEqualToString:@"registerSegue"]) {
+    if ([identifier isEqualToString:@"connectionToRegisterSegue"]) {
+        return true;
+    }
+    
+    // Forgot password view
+    if ([identifier isEqualToString:@"connectionToForgotPasswordSegue"]) {
         return true;
     }
     
