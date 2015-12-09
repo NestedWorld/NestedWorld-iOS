@@ -34,6 +34,10 @@
     UIViewController *next = [segue destinationViewController];
     
     [next setValue:apiManager forKey:@"apiManager"];
+    
+    if ([segue.identifier isEqualToString:@"homePageSegue"]) {
+        [next setValue:user forKey:@"user"];
+    }
 }
 
 - (BOOL)shouldPerformSegueWithIdentifier:(NSString *)identifier sender:(id)sender
@@ -64,6 +68,16 @@
                 NSLog(@"Success");
                 
                 // User init
+                
+                NSString *token = response[@"token"];
+                
+                NSLog(@"User");
+                [apiManager userInformationsRequest:token success:^(NSDictionary *response) {
+                    NSLog(@"Success");
+                    NSLog(@"%@", response);
+                } failure:^(NSDictionary *error) {
+                    NSLog(@"Failure");
+                }];
                 
                 // [self performSegueWithIdentifier:identifier sender:sender];
                 

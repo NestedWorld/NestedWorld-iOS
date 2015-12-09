@@ -25,19 +25,18 @@
 }
 
 // MARK: Authentification requests
-
 - (void) registerRequest:(NSString *)email
                 password:(NSString *)password
                 nickname:(NSString *)nickname
                   succes:(void (^)(NSDictionary *))succesHandler
                  failure:(void (^)(NSDictionary *))failureHandler
 {
-    NSString *url = [rootURL stringByAppendingString:@"/user/auth/register"];
+    NSString *url = [rootURL stringByAppendingString:@"/users/auth/register"];
     
     NSDictionary *params = @{
                              @"email": email,
                              @"password": password,
-                             @"nickname": nickname
+                             @"pseudo": nickname
                              };
     
     [requestManager doPostRequest:url success:^(NSDictionary *response) {
@@ -77,7 +76,7 @@
     NSString *url = [rootURL stringByAppendingString:@"/users/auth/logout"];
     
     NSDictionary *headerParams = @{
-                                   @"token": token
+                                   @"Authorization": token
                                    };
     
     [requestManager doGetRequest:url success:^(NSDictionary *response) {
@@ -87,7 +86,7 @@
     } addToHeader:headerParams];
 }
 
-- (void) forgotPasswordRequest:(NSString *)email
+- (void) resetPasswordRequest:(NSString *)email
                        success:(void (^)(NSDictionary *))successHandler
                        failure:(void (^)(NSDictionary *))failureHandler
 {
@@ -112,7 +111,7 @@
     NSString *url = [rootURL stringByAppendingString:@"/users/"];
     
     NSDictionary *headerParams = @{
-                                   @"token": token
+                                   @"Authorization": token
                                    };
     
     [requestManager doGetRequest:url success:^(NSDictionary *response) {
