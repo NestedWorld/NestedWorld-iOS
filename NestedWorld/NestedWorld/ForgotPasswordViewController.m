@@ -40,10 +40,23 @@
     if ([self.emailField.text isEqualToString:@""]) {
         self.infoLabel.text = @"The email field is empty";
     } else {
-        self.sendRequestButton.userInteractionEnabled = NO;
-        // forgot password request here
+        NSLog(@"Reset Password");
         
-        self.sendRequestButton.userInteractionEnabled = YES;
+        self.sendRequestButton.userInteractionEnabled = NO;
+        
+        [apiManager resetPasswordRequest:self.emailField.text success:^(NSDictionary *response) {
+            NSLog(@"Success");
+            
+            self.infoLabel.text = @"Password successfully sent";
+            
+            self.sendRequestButton.userInteractionEnabled = YES;
+        } failure:^(NSDictionary *error) {
+            NSLog(@"Failure");
+            
+            self.infoLabel.text = @"Error forgot password";
+            
+            self.sendRequestButton.userInteractionEnabled = YES;
+        }];
     }
 }
 
