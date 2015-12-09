@@ -53,6 +53,8 @@
         [apiManager registerRequest:self.emailField.text password:self.passwordField.text nickname:self.nicknameField.text succes:^(NSDictionary *response) {
             NSLog(@"Success");
             self.infoLabel.text = @"You are registered, you can now login";
+            
+            self.registerButton.userInteractionEnabled = YES;
         } failure:^(NSDictionary *error) {
             NSLog(@"Failure");
             self.infoLabel.text = @"Register error";
