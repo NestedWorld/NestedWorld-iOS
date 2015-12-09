@@ -18,7 +18,7 @@
 // Label
 @property (weak, nonatomic) IBOutlet UILabel *infoLabel;
 
-// TextField
+// Text field
 @property (weak, nonatomic) IBOutlet UITextField *emailField;
 @property (weak, nonatomic) IBOutlet UITextField *passwordField;
 
