@@ -29,21 +29,21 @@
               failure:(void (^)(NSDictionary *error))failureHandler;
 
 - (void) logoutRequest:(NSString *)token
-               success:(void (^)(NSDictionary *))successHandler
-               failure:(void (^)(NSDictionary *))failureHandler;
+               success:(void (^)(NSDictionary *response))successHandler
+               failure:(void (^)(NSDictionary *error))failureHandler;
 
-- (void) forgotPasswordRequest:(NSString *)email
-                       success:(void (^)(NSDictionary *))successHandler
-                       failure:(void (^)(NSDictionary *))failureHandler;
+- (void) resetPasswordRequest:(NSString *)email
+                       success:(void (^)(NSDictionary *response))successHandler
+                       failure:(void (^)(NSDictionary *error))failureHandler;
 
 // User requests
 - (void) userInformationsRequest:(NSString *)token
-                         success:(void (^)(NSDictionary *))successHandler
-                         failure:(void (^)(NSDictionary *))failureHandler;
+                         success:(void (^)(NSDictionary *response))successHandler
+                         failure:(void (^)(NSDictionary *error))failureHandler;
 
 // Monster requests
-- (void) monsterRequest:(void (^)(NSDictionary *))successHandler
-                failure:(void (^)(NSDictionary *))failureHandler;
+- (void) monsterRequest:(void (^)(NSDictionary *response))successHandler
+                failure:(void (^)(NSDictionary *error))failureHandler;
 
 
 @end
