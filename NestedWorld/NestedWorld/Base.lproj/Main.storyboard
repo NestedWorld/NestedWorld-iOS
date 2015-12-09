@@ -23,25 +23,25 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-XE-R78">
                                 <rect key="frame" x="117" y="172" width="490" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-3t-ObQ">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cPw-3t-ObQ">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-So-5Jt">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="nickname" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EcB-So-5Jt">
                                         <rect key="frame" x="86" y="0.0" width="83" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOH-2Q-roR">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOH-2Q-roR">
                                         <rect key="frame" x="199" y="0.0" width="83" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password (confirmation)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4UO-yi-qrs">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password (confirmation)" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4UO-yi-qrs">
                                         <rect key="frame" x="312" y="0.0" width="178" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -214,6 +214,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7KU-JF-ixQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2C6-dF-6op">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8oJ-tX-IHK">
@@ -299,6 +300,9 @@
                                         <include reference="XoT-eh-y83"/>
                                     </mask>
                                 </variation>
+                                <connections>
+                                    <action selector="forgotPasswordAction:" destination="5D9-ML-Ka2" eventType="touchUpInside" id="XYX-F1-rLF"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -329,9 +333,6 @@
                                 <exclude reference="4cq-Ei-jBS"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KkC-ss-rPy"/>
-                                <exclude reference="kMp-Av-JzU"/>
-                                <exclude reference="r05-M4-gsm"/>
                                 <exclude reference="0nF-SA-Qxx"/>
                                 <exclude reference="6vJ-lh-XAi"/>
                                 <exclude reference="hix-hi-rBX"/>
@@ -345,6 +346,9 @@
                                 <exclude reference="tHa-Bp-xME"/>
                                 <exclude reference="tmN-Zz-aR5"/>
                                 <exclude reference="xgg-fg-GEe"/>
+                                <exclude reference="KkC-ss-rPy"/>
+                                <exclude reference="kMp-Av-JzU"/>
+                                <exclude reference="r05-M4-gsm"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -355,9 +359,6 @@
                                 <include reference="4cq-Ei-jBS"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KkC-ss-rPy"/>
-                                <include reference="kMp-Av-JzU"/>
-                                <include reference="r05-M4-gsm"/>
                                 <include reference="0nF-SA-Qxx"/>
                                 <include reference="6vJ-lh-XAi"/>
                                 <include reference="hix-hi-rBX"/>
@@ -371,6 +372,9 @@
                                 <include reference="tHa-Bp-xME"/>
                                 <include reference="tmN-Zz-aR5"/>
                                 <include reference="xgg-fg-GEe"/>
+                                <include reference="KkC-ss-rPy"/>
+                                <include reference="kMp-Av-JzU"/>
+                                <include reference="r05-M4-gsm"/>
                             </mask>
                         </variation>
                     </view>
@@ -420,13 +424,13 @@
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-AV-1dd">
                                 <rect key="frame" x="132" y="215" width="164" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-hW-lwS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-hW-lwS">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6L-AS-ShR">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6L-AS-ShR">
                                         <rect key="frame" x="81" y="0.0" width="83" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
