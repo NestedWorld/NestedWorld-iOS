@@ -23,5 +23,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *sendRequestButton;
 @property (weak, nonatomic) IBOutlet UIButton *connetionButton;
 
+// Button actions
+- (IBAction)forgotPasswordAction:(id)sender;
+
 
 @end
