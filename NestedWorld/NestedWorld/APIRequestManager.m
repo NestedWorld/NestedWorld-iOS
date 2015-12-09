@@ -24,6 +24,8 @@
     return self;
 }
 
+// MARK: Authentification requests
+
 - (void) registerRequest:(NSString *)email
                 password:(NSString *)password
                 nickname:(NSString *)nickname
@@ -84,6 +86,55 @@
         failureHandler(error);
     } addToHeader:headerParams];
 }
+
+- (void) forgotPasswordRequest:(NSString *)email
+                       success:(void (^)(NSDictionary *))successHandler
+                       failure:(void (^)(NSDictionary *))failureHandler
+{
+    NSString *url = [rootURL stringByAppendingString:@"/users/auth/resetpassword"];
+    
+    NSDictionary *params = @{
+                             @"email": email
+                             };
+    
+    [requestManager doPostRequest:url success:^(NSDictionary *response) {
+        successHandler(response);
+    } failure:^(NSDictionary *error) {
+        failureHandler(error);
+    } params:params addToHeader:nil];
+}
+
+// MARK: User requests
+- (void) userInformationsRequest:(NSString *)token
+                         success:(void (^)(NSDictionary *))successHandler
+                         failure:(void (^)(NSDictionary *))failureHandler
+{
+    NSString *url = [rootURL stringByAppendingString:@"/users/"];
+    
+    NSDictionary *headerParams = @{
+                                   @"token": token
+                                   };
+    
+    [requestManager doGetRequest:url success:^(NSDictionary *response) {
+        successHandler(response);
+    } failure:^(NSDictionary *error) {
+        failureHandler(error);
+    } addToHeader:headerParams];
+}
+
+// MARK: Monster requests
+- (void) monsterRequest:(void (^)(NSDictionary *))successHandler
+                failure:(void (^)(NSDictionary *))failureHandler
+{
+    NSString *url = [rootURL stringByAppendingString:@"/monsters/"];
+    
+    [requestManager doGetRequest:url success:^(NSDictionary *response) {
+        successHandler(response);
+    } failure:^(NSDictionary *error) {
+        failureHandler(error);
+    } addToHeader:nil];
+}
+
 
 @end
 
