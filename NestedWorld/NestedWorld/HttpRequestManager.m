@@ -26,7 +26,7 @@
 {
     if (params != nil) {
         for (id key in params) {
-            [manager.requestSerializer setValue:[params objectForKey:key] forKey:key];
+            [manager.requestSerializer setValue:[params objectForKey:key] forHTTPHeaderField:key];
         }
     }
 }
@@ -41,7 +41,7 @@
     [manager GET:url parameters:nil success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         successHandler((NSDictionary *)responseObject);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        failureHandler((NSDictionary *)[operation valueForKey:@"responseObject"]);
+        failureHandler((NSDictionary *)operation.responseObject);
     }];
 }
 
@@ -56,7 +56,7 @@
     [manager POST:url parameters:params success:^(AFHTTPRequestOperation * _Nonnull operation, id  _Nonnull responseObject) {
         successHandler((NSDictionary *)responseObject);
     } failure:^(AFHTTPRequestOperation * _Nullable operation, NSError * _Nonnull error) {
-        failureHandler((NSDictionary *)[operation valueForKey:@"responseObject"]);
+        failureHandler((NSDictionary *)operation.responseObject);
     }];
 }
 
