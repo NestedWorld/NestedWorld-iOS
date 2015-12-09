@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nnh-XE-nwf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="682.5" y="-261.75"/>
+            <point key="canvasLocation" x="682.5" y="1176"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -60,16 +60,16 @@
                                 </variation>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="rmh-AV-1dd">
-                                <rect key="frame" x="132" y="215" width="189" height="30"/>
+                                <rect key="frame" x="132" y="215" width="164" height="30"/>
                                 <subviews>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-hW-lwS">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZY-hW-lwS">
                                         <rect key="frame" x="0.0" y="0.0" width="56" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Y6L-AS-ShR">
-                                        <rect key="frame" x="106" y="0.0" width="83" height="30"/>
+                                        <rect key="frame" x="81" y="0.0" width="83" height="30"/>
                                         <animations/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
@@ -99,11 +99,11 @@
                                     </mask>
                                 </variation>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Fl-j7-fpA">
-                                <rect key="frame" x="0.0" y="661" width="400" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8Fl-j7-fpA">
+                                <rect key="frame" x="0.0" y="661" width="301" height="30"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjR-fQ-B4o">
-                                        <rect key="frame" x="20" y="20" width="57" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZjR-fQ-B4o">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="7b3-cb-QW7"/>
@@ -119,27 +119,17 @@
                                                 <include reference="7b3-cb-QW7"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <segue destination="2aR-o9-e2z" kind="show" identifier="registerSegue" id="mWm-PH-hmZ"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-z2-gHP">
-                                        <rect key="frame" x="137" y="20" width="127" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kr2-z2-gHP">
+                                        <rect key="frame" x="87" y="0.0" width="127" height="30"/>
                                         <animations/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="150" id="0s1-K8-Vm8"/>
-                                        </constraints>
                                         <state key="normal" title="Forgot password ?"/>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="0s1-K8-Vm8"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=regular-widthClass=compact">
-                                            <mask key="constraints">
-                                                <include reference="0s1-K8-Vm8"/>
-                                            </mask>
-                                        </variation>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGA-p6-J5O">
-                                        <rect key="frame" x="323" y="20" width="57" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGA-p6-J5O">
+                                        <rect key="frame" x="244" y="0.0" width="57" height="30"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="r75-ry-0ko"/>
@@ -246,24 +236,24 @@
                                 <exclude reference="dlO-KP-90h"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="KFA-tK-afQ"/>
-                                <exclude reference="UHA-8P-PDm"/>
+                                <exclude reference="6X8-Sh-Ofe"/>
+                                <exclude reference="UhJ-gH-cDb"/>
+                                <exclude reference="Ypq-dr-83X"/>
+                                <exclude reference="zec-Kx-7Bi"/>
                                 <exclude reference="0zx-uy-BL0"/>
                                 <exclude reference="9SM-ot-hcy"/>
                                 <exclude reference="us0-cb-kAv"/>
+                                <exclude reference="KFA-tK-afQ"/>
+                                <exclude reference="UHA-8P-PDm"/>
                                 <exclude reference="7ro-yt-e8B"/>
                                 <exclude reference="NJR-iD-ZVh"/>
                                 <exclude reference="e5D-R9-00b"/>
                                 <exclude reference="nYN-Hh-TPU"/>
                                 <exclude reference="t0r-V0-NVC"/>
-                                <exclude reference="6X8-Sh-Ofe"/>
-                                <exclude reference="UhJ-gH-cDb"/>
-                                <exclude reference="Ypq-dr-83X"/>
-                                <exclude reference="zec-Kx-7Bi"/>
+                                <exclude reference="lyl-Fo-Y45"/>
                                 <exclude reference="YBb-I7-vjm"/>
                                 <exclude reference="py1-dG-6Fl"/>
                                 <exclude reference="t0Q-o9-f8h"/>
-                                <exclude reference="lyl-Fo-Y45"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -273,24 +263,24 @@
                                 <include reference="dlO-KP-90h"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="KFA-tK-afQ"/>
-                                <include reference="UHA-8P-PDm"/>
+                                <include reference="6X8-Sh-Ofe"/>
+                                <include reference="UhJ-gH-cDb"/>
+                                <include reference="Ypq-dr-83X"/>
+                                <include reference="zec-Kx-7Bi"/>
                                 <include reference="0zx-uy-BL0"/>
                                 <include reference="9SM-ot-hcy"/>
                                 <include reference="us0-cb-kAv"/>
+                                <include reference="KFA-tK-afQ"/>
+                                <include reference="UHA-8P-PDm"/>
                                 <include reference="7ro-yt-e8B"/>
                                 <include reference="NJR-iD-ZVh"/>
                                 <include reference="e5D-R9-00b"/>
                                 <include reference="nYN-Hh-TPU"/>
                                 <include reference="t0r-V0-NVC"/>
-                                <include reference="6X8-Sh-Ofe"/>
-                                <include reference="UhJ-gH-cDb"/>
-                                <include reference="Ypq-dr-83X"/>
-                                <include reference="zec-Kx-7Bi"/>
+                                <include reference="lyl-Fo-Y45"/>
                                 <include reference="YBb-I7-vjm"/>
                                 <include reference="py1-dG-6Fl"/>
                                 <include reference="t0Q-o9-f8h"/>
-                                <include reference="lyl-Fo-Y45"/>
                             </mask>
                         </variation>
                     </view>
