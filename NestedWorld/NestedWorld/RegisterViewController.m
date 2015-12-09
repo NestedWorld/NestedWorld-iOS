@@ -14,24 +14,52 @@
 
 @implementation RegisterViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+// MARK: Segue override
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    UIViewController *next = [segue destinationViewController];
+    
+    [next setValue:apiManager forKey:@"apiManager"];
 }
-*/
+
+// MARK: Button actions
+- (IBAction)registerAction:(id)sender
+{
+    if ([self.emailField.text isEqualToString:@""]) {
+        self.infoLabel.text = @"The email field is empty";
+    } else if ([self.nicknameField.text isEqualToString:@""]) {
+        self.infoLabel.text = @"The nickname field is empty";
+    } else if ([self.passwordField.text isEqualToString:@""]) {
+        self.infoLabel.text = @"The password field is empty";
+    } else if (![self.passwordField.text isEqualToString:self.confirmationPasswordField.text]) {
+        self.infoLabel.text = @"Difference between the password and its confirmation";
+    } else {
+        NSLog(@"Register");
+        
+        self.registerButton.userInteractionEnabled = NO;
+        
+        [apiManager registerRequest:self.emailField.text password:self.passwordField.text nickname:self.nicknameField.text succes:^(NSDictionary *response) {
+            NSLog(@"Success");
+            self.infoLabel.text = @"You are registered, you can now login";
+        } failure:^(NSDictionary *error) {
+            NSLog(@"Failure");
+            self.infoLabel.text = @"Register error";
+            
+            self.registerButton.userInteractionEnabled = YES;
+        }];
+    }
+}
 
 @end
