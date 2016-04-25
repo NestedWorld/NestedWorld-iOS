@@ -15,4 +15,7 @@ protocol HttpRequestManagerProtocol
     
     func post(url: String, params: Dictionary<String, AnyObject>?, headers: Dictionary<String, String>?,
         success: (response: AnyObject?) -> Void, failure: (error: NSError?, response: AnyObject?) -> Void)
+    
+    func put(url: String, params: Dictionary<String, AnyObject>?, headers: Dictionary<String, String>?,
+        success: (response: AnyObject?) -> Void, failure: (error: NSError?, response: AnyObject?) -> Void);
 }
