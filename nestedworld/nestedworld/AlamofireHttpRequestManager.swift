@@ -40,4 +40,18 @@ class AlamofireHttpRequestManager: HttpRequestManagerProtocol
                 }
         }
     }
+    
+    func put(url: String, params: Dictionary<String, AnyObject>?, headers: Dictionary<String, String>?,
+        success: (response: AnyObject?) -> Void, failure: (error: NSError?, response: AnyObject?) -> Void)
+    {
+        Alamofire.request(.PUT, url, parameters: params, encoding: self.encodingFormat, headers: headers)
+            .responseJSON { (response) -> Void in
+                switch response.result {
+                case .Success:
+                    success(response: response.result.value)
+                case .Failure:
+                    failure(error: response.result.error, response: response.result.value)
+                }
+        }
+    }
 }
