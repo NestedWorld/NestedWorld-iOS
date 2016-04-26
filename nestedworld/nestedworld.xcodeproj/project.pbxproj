@@ -31,8 +31,18 @@
 		AD315C1C1C7EF9640083D6D7 /* MonsterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD315C1B1C7EF9640083D6D7 /* MonsterTableViewController.swift */; };
 		AD315C241C7F65C80083D6D7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD315C231C7F65C80083D6D7 /* MapViewController.swift */; };
 		AD315C251C7F65C80083D6D7 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD315C231C7F65C80083D6D7 /* MapViewController.swift */; };
-		AD73395C1C7DA47C00974330 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73395B1C7DA47C00974330 /* Extensions.swift */; };
-		AD73395D1C7DA47C00974330 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD73395B1C7DA47C00974330 /* Extensions.swift */; };
+		AD3EB2751CCE73A600E26A7B /* APIUserRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3EB2741CCE73A600E26A7B /* APIUserRequestManager.swift */; };
+		AD3EB27A1CCE80BD00E26A7B /* APIMonsterRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3EB2791CCE80BD00E26A7B /* APIMonsterRequestManager.swift */; };
+		AD3EB27D1CCE81CD00E26A7B /* APIUserAuthenticationRequestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3EB27C1CCE81CD00E26A7B /* APIUserAuthenticationRequestManager.swift */; };
+		AD3EB27F1CCEA9E300E26A7B /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3EB27E1CCEA9E300E26A7B /* Context.swift */; };
+		AD7C52CE1CCF4E4D00CBC913 /* UserNotNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52CD1CCF4E4D00CBC913 /* UserNotNilTests.swift */; };
+		AD7C52D31CCF564C00CBC913 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52D21CCF564C00CBC913 /* StringExtension.swift */; };
+		AD7C52D51CCF570A00CBC913 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52D41CCF570A00CBC913 /* NSDateExtension.swift */; };
+		AD7C52D61CCF5A2A00CBC913 /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52D21CCF564C00CBC913 /* StringExtension.swift */; };
+		AD7C52D71CCF5A2D00CBC913 /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52D41CCF570A00CBC913 /* NSDateExtension.swift */; };
+		AD7C52DB1CCF678600CBC913 /* UserTestsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52DA1CCF678600CBC913 /* UserTestsManager.swift */; };
+		AD7C52DE1CCF69EB00CBC913 /* UserTestsProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52DD1CCF69EB00CBC913 /* UserTestsProtocol.swift */; };
+		AD7C52E01CCF6A8300CBC913 /* UserNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52DF1CCF6A8300CBC913 /* UserNilTests.swift */; };
 		AD9E757F1C74C87400C2D482 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E757E1C74C87400C2D482 /* HomePageViewController.swift */; };
 		AD9E75801C74C87400C2D482 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E757E1C74C87400C2D482 /* HomePageViewController.swift */; };
 /* End PBXBuildFile section */
@@ -80,7 +90,16 @@
 		AD315C191C7EF2890083D6D7 /* MonsterTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterTableViewCell.swift; sourceTree = "<group>"; };
 		AD315C1B1C7EF9640083D6D7 /* MonsterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonsterTableViewController.swift; sourceTree = "<group>"; };
 		AD315C231C7F65C80083D6D7 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		AD73395B1C7DA47C00974330 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		AD3EB2741CCE73A600E26A7B /* APIUserRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserRequestManager.swift; sourceTree = "<group>"; };
+		AD3EB2791CCE80BD00E26A7B /* APIMonsterRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIMonsterRequestManager.swift; sourceTree = "<group>"; };
+		AD3EB27C1CCE81CD00E26A7B /* APIUserAuthenticationRequestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIUserAuthenticationRequestManager.swift; sourceTree = "<group>"; };
+		AD3EB27E1CCEA9E300E26A7B /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
+		AD7C52CD1CCF4E4D00CBC913 /* UserNotNilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNotNilTests.swift; sourceTree = "<group>"; };
+		AD7C52D21CCF564C00CBC913 /* StringExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
+		AD7C52D41CCF570A00CBC913 /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		AD7C52DA1CCF678600CBC913 /* UserTestsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTestsManager.swift; sourceTree = "<group>"; };
+		AD7C52DD1CCF69EB00CBC913 /* UserTestsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTestsProtocol.swift; sourceTree = "<group>"; };
+		AD7C52DF1CCF6A8300CBC913 /* UserNilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNilTests.swift; sourceTree = "<group>"; };
 		AD9E757E1C74C87400C2D482 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
 		DDDC0CACD706CAEB8DCF9CBF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +163,7 @@
 		AD14CD481C747A0900B44F5A /* nestedworld */ = {
 			isa = PBXGroup;
 			children = (
+				AD7C52D11CCF563500CBC913 /* Extensions */,
 				AD14CD8F1C747C7A00B44F5A /* Models */,
 				AD14CD781C747A1500B44F5A /* Views */,
 				AD14CD771C747A1000B44F5A /* API */,
@@ -159,6 +179,7 @@
 		AD14CD5D1C747A0900B44F5A /* nestedworldTests */ = {
 			isa = PBXGroup;
 			children = (
+				AD7C52CC1CCF40F800CBC913 /* Models */,
 				AD14CD5E1C747A0900B44F5A /* nestedworldTests.swift */,
 				AD14CD601C747A0900B44F5A /* Info.plist */,
 			);
@@ -177,6 +198,7 @@
 		AD14CD771C747A1000B44F5A /* API */ = {
 			isa = PBXGroup;
 			children = (
+				AD3EB27E1CCEA9E300E26A7B /* Context.swift */,
 				AD8D4A931C841A9600AE508B /* API requests */,
 				AD14CD7D1C747A5700B44F5A /* Http requests */,
 			);
@@ -187,19 +209,19 @@
 			isa = PBXGroup;
 			children = (
 				AD14CD8E1C747C6F00B44F5A /* Game */,
-				AD14CD791C747A1F00B44F5A /* Authentification */,
+				AD14CD791C747A1F00B44F5A /* Authentication */,
 			);
 			name = Views;
 			sourceTree = "<group>";
 		};
-		AD14CD791C747A1F00B44F5A /* Authentification */ = {
+		AD14CD791C747A1F00B44F5A /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
 				AD14CD7A1C747A5200B44F5A /* LoginViewController.swift */,
 				AD14CD881C747C0C00B44F5A /* RegisterViewController.swift */,
 				AD14CD8B1C747C4500B44F5A /* ResetPasswordViewController.swift */,
 			);
-			name = Authentification;
+			name = Authentication;
 			sourceTree = "<group>";
 		};
 		AD14CD7D1C747A5700B44F5A /* Http requests */ = {
@@ -235,7 +257,6 @@
 			children = (
 				AD14CD911C747C8700B44F5A /* Monster */,
 				AD14CD901C747C8000B44F5A /* User */,
-				AD73395B1C7DA47C00974330 /* Extensions.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -312,28 +333,99 @@
 			name = Detail;
 			sourceTree = "<group>";
 		};
+		AD3EB2761CCE79BB00E26A7B /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				AD9507311CCE5EE300D40379 /* User */,
+				AD9507321CCE5EEF00D40379 /* Monster */,
+			);
+			name = Module;
+			sourceTree = "<group>";
+		};
+		AD3EB27B1CCE81B200E26A7B /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				AD3EB27C1CCE81CD00E26A7B /* APIUserAuthenticationRequestManager.swift */,
+			);
+			name = Authentication;
+			sourceTree = "<group>";
+		};
+		AD7C52CC1CCF40F800CBC913 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C52D01CCF4FE300CBC913 /* Monster */,
+				AD7C52CF1CCF4FDD00CBC913 /* User */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		AD7C52CF1CCF4FDD00CBC913 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C52DC1CCF68DB00CBC913 /* Tests */,
+				AD7C52DA1CCF678600CBC913 /* UserTestsManager.swift */,
+			);
+			name = User;
+			sourceTree = "<group>";
+		};
+		AD7C52D01CCF4FE300CBC913 /* Monster */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Monster;
+			sourceTree = "<group>";
+		};
+		AD7C52D11CCF563500CBC913 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C52D21CCF564C00CBC913 /* StringExtension.swift */,
+				AD7C52D41CCF570A00CBC913 /* NSDateExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		AD7C52DC1CCF68DB00CBC913 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C52E11CCF6ABF00CBC913 /* Protocol */,
+				AD7C52CD1CCF4E4D00CBC913 /* UserNotNilTests.swift */,
+				AD7C52DF1CCF6A8300CBC913 /* UserNilTests.swift */,
+			);
+			name = Tests;
+			sourceTree = "<group>";
+		};
+		AD7C52E11CCF6ABF00CBC913 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				AD7C52DD1CCF69EB00CBC913 /* UserTestsProtocol.swift */,
+			);
+			name = Protocol;
+			sourceTree = "<group>";
+		};
 		AD8D4A931C841A9600AE508B /* API requests */ = {
 			isa = PBXGroup;
 			children = (
-				AD9507321CCE5EEF00D40379 /* Monster requests */,
-				AD9507311CCE5EE300D40379 /* User requests */,
+				AD3EB2761CCE79BB00E26A7B /* Module */,
 				AD14CD851C747AE500B44F5A /* APIRequestManager.swift */,
 			);
 			name = "API requests";
 			sourceTree = "<group>";
 		};
-		AD9507311CCE5EE300D40379 /* User requests */ = {
+		AD9507311CCE5EE300D40379 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				AD3EB27B1CCE81B200E26A7B /* Authentication */,
+				AD3EB2741CCE73A600E26A7B /* APIUserRequestManager.swift */,
 			);
-			name = "User requests";
+			name = User;
 			sourceTree = "<group>";
 		};
-		AD9507321CCE5EEF00D40379 /* Monster requests */ = {
+		AD9507321CCE5EEF00D40379 /* Monster */ = {
 			isa = PBXGroup;
 			children = (
+				AD3EB2791CCE80BD00E26A7B /* APIMonsterRequestManager.swift */,
 			);
-			name = "Monster requests";
+			name = Monster;
 			sourceTree = "<group>";
 		};
 		FF412230BCAD7675507B336E /* Pods */ = {
@@ -495,18 +587,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD3EB27A1CCE80BD00E26A7B /* APIMonsterRequestManager.swift in Sources */,
 				AD315C1A1C7EF2890083D6D7 /* MonsterTableViewCell.swift in Sources */,
 				AD14CD961C747CA400B44F5A /* Monster.swift in Sources */,
 				AD14CD861C747AE500B44F5A /* APIRequestManager.swift in Sources */,
 				AD14CD7B1C747A5200B44F5A /* LoginViewController.swift in Sources */,
 				AD14CD891C747C0C00B44F5A /* RegisterViewController.swift in Sources */,
+				AD3EB2751CCE73A600E26A7B /* APIUserRequestManager.swift in Sources */,
 				AD14CD8C1C747C4500B44F5A /* ResetPasswordViewController.swift in Sources */,
 				AD14CD831C747AB500B44F5A /* AlamofireHttpRequestManager.swift in Sources */,
 				AD14CD931C747C9A00B44F5A /* User.swift in Sources */,
 				AD14CD801C747A8600B44F5A /* HttpRequestManagerProtocol.swift in Sources */,
 				AD9E757F1C74C87400C2D482 /* HomePageViewController.swift in Sources */,
-				AD73395C1C7DA47C00974330 /* Extensions.swift in Sources */,
+				AD3EB27D1CCE81CD00E26A7B /* APIUserAuthenticationRequestManager.swift in Sources */,
 				AD14CD4A1C747A0900B44F5A /* AppDelegate.swift in Sources */,
+				AD3EB27F1CCEA9E300E26A7B /* Context.swift in Sources */,
+				AD7C52D51CCF570A00CBC913 /* NSDateExtension.swift in Sources */,
+				AD7C52D31CCF564C00CBC913 /* StringExtension.swift in Sources */,
 				AD315C1C1C7EF9640083D6D7 /* MonsterTableViewController.swift in Sources */,
 				AD315C241C7F65C80083D6D7 /* MapViewController.swift in Sources */,
 			);
@@ -516,10 +613,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AD7C52E01CCF6A8300CBC913 /* UserNilTests.swift in Sources */,
+				AD7C52D71CCF5A2D00CBC913 /* NSDateExtension.swift in Sources */,
 				AD14CD5F1C747A0900B44F5A /* nestedworldTests.swift in Sources */,
 				AD14CD941C747C9A00B44F5A /* User.swift in Sources */,
+				AD7C52D61CCF5A2A00CBC913 /* StringExtension.swift in Sources */,
+				AD7C52CE1CCF4E4D00CBC913 /* UserNotNilTests.swift in Sources */,
+				AD7C52DB1CCF678600CBC913 /* UserTestsManager.swift in Sources */,
+				AD7C52DE1CCF69EB00CBC913 /* UserTestsProtocol.swift in Sources */,
 				AD14CD971C747CA400B44F5A /* Monster.swift in Sources */,
-				AD73395D1C7DA47C00974330 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -472,16 +472,37 @@
                                     <rect key="frame" x="20" y="28" width="360" height="386"/>
                                 </variation>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pdH-5B-4O8">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Center"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="177" y="437" width="47" height="30"/>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ml0-d0-Wzp">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="Go back"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="53" y="437" width="57" height="30"/>
+                                </variation>
+                                <connections>
+                                    <segue destination="KW7-fp-Xgc" kind="show" identifier="mapToHomePageSegue" id="KLh-nc-IoA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="vxR-SN-llA"/>
+                                <exclude reference="pdH-5B-4O8"/>
+                                <exclude reference="Ml0-d0-Wzp"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="vxR-SN-llA"/>
+                                <include reference="pdH-5B-4O8"/>
+                                <include reference="Ml0-d0-Wzp"/>
                             </mask>
                         </variation>
                     </view>
@@ -703,4 +724,7 @@
     <resources>
         <image name="Default" width="80" height="80"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="KLh-nc-IoA"/>
+    </inferredMetricsTieBreakers>
 </document>
