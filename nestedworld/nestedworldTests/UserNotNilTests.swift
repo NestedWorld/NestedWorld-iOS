@@ -7,31 +7,38 @@
 //
 
 import XCTest
-@testable import nestedworld
 
-class UserTests: XCTestCase
+class UserNotNilTests: UserTestsProtocol
 {
-    private var errorMessage: String = "[TEST]-[USER]-[ERROR]-"
+    private var errorMessageRoot: String
     
-    // MARK: Default value
-    private let email: String = "api.test@nestedworld.com"
-    private let nickname: String = "nestedworld-test"
+    private let email: String = "test@nestedworld.com"
+    private let nickname: String = "test"
     private let gender: String = "male"
     private let birthDate:String = "1942-08-09T12:42:42.6789+00:00"
     private let city: String = "Paris"
-    private let background: String = "http://image-background.nestedworld.com"
-    private let avatar: String = "http://image-avatar.nestedworld.com"
+    private let background: String = "http://background-test.nestedworld.com"
+    private let avatar: String = "http://avatar-test.nestedworld.com"
     private let registerDate: String = "2010-01-27T17:42:42.1234+00:00"
     private let isActive: Bool = true
+    
+    init(errorMsgRoot: String)
+    {
+        self.errorMessageRoot = errorMsgRoot + "[NOT NIL]: "
+    }
     
     func testAll()
     {
         self.testEverythingIsOk()
+        self.testEmail()
+        self.testNickname()
         self.testGender()
         self.testBirthDate()
         self.testCity()
-        self.testBackGround()
+        self.testBackground()
         self.testAvatar()
+        self.testRegisterDate()
+        self.testIsActive()
     }
     
     func testEverythingIsOk()
@@ -40,7 +47,15 @@ class UserTests: XCTestCase
             gender: self.gender, birthDate: self.birthDate, city: self.city,
             background: self.background, avatar: self.avatar,
             registerDate: self.registerDate, isActive: self.isActive)
-        XCTAssertNotNil(test, self.errorMessage + "")
+        XCTAssertNotNil(test, self.errorMessageRoot + "..")
+    }
+    
+    func testEmail()
+    {
+    }
+    
+    func testNickname()
+    {
     }
     
     func testGender()
@@ -58,7 +73,7 @@ class UserTests: XCTestCase
                 gender: value as? String, birthDate: self.birthDate, city: self.city,
                 background: self.background, avatar: self.avatar,
                 registerDate: self.registerDate, isActive: self.isActive)
-            XCTAssertNotNil(test, self.errorMessage + "[GENDER]: Test has failed with value: \"\(value)\"")
+            XCTAssertNotNil(test, self.errorMessageRoot + "[GENDER]: Test has failed with value: \"\(value)\"")
         }
     }
     
@@ -76,7 +91,7 @@ class UserTests: XCTestCase
                 gender: self.gender, birthDate: value as? String, city: self.city,
                 background: self.background, avatar: self.avatar,
                 registerDate: self.registerDate, isActive: self.isActive)
-            XCTAssertNotNil(test, self.errorMessage + "[BIRTHDATE]: Test has failed with value: \"\(value)\"")
+            XCTAssertNotNil(test, self.errorMessageRoot + "[BIRTHDATE]: Test has failed with value: \"\(value)\"")
         }
     }
     
@@ -94,11 +109,11 @@ class UserTests: XCTestCase
                 gender: self.gender, birthDate: self.birthDate, city: value as? String,
                 background: self.background, avatar: self.avatar,
                 registerDate: self.registerDate, isActive: self.isActive)
-            XCTAssertNotNil(test, self.errorMessage + "[CITY]: Test has failed with value: \"\(value)\"")
+            XCTAssertNotNil(test, self.errorMessageRoot + "[CITY]: Test has failed with value: \"\(value)\"")
         }
     }
     
-    func testBackGround()
+    func testBackground()
     {
         let testCases: [AnyObject?] = [
             "",                                             // Empty
@@ -112,7 +127,7 @@ class UserTests: XCTestCase
                 gender: self.gender, birthDate: self.birthDate, city: self.city,
                 background: value as? String, avatar: self.avatar,
                 registerDate: self.registerDate, isActive: self.isActive)
-            XCTAssertNotNil(test, self.errorMessage + "[BACKGROUND]: Test has failed with value: \"\(value)\"")
+            XCTAssertNotNil(test, self.errorMessageRoot + "[BACKGROUND]: Test has failed with value: \"\(value)\"")
         }
     }
     
@@ -130,7 +145,15 @@ class UserTests: XCTestCase
                 gender: self.gender, birthDate: self.birthDate, city: self.city,
                 background: self.background, avatar: value as? String,
                 registerDate: self.registerDate, isActive: self.isActive)
-            XCTAssertNotNil(test, self.errorMessage + "[AVATAR]: Test has failed with value: \"\(value)\"")
+            XCTAssertNotNil(test, self.errorMessageRoot + "[AVATAR]: Test has failed with value: \"\(value)\"")
         }
+    }
+    
+    func testRegisterDate()
+    {
+    }
+    
+    func testIsActive()
+    {
     }
 }
