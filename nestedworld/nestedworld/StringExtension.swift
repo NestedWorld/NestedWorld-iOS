@@ -1,8 +1,8 @@
 //
-//  Extensions.swift
+//  StringExtension.swift
 //  nestedworld
 //
-//  Created by Jean-Antoine Dupont on 24/02/2016.
+//  Created by Jean-Antoine Dupont on 26/04/2016.
 //  Copyright © 2016 NestedWorld. All rights reserved.
 //
 
@@ -49,16 +49,5 @@ extension String
         default:
             return Monster.TYPE.UNKNOWN
         }
-    }
-}
-
-extension NSDate
-{
-    func toString(format: String) -> String
-    {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.dateFormat = format
-        
-        return dateFormatter.stringFromDate(self)
     }
 }
