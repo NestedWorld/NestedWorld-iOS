@@ -48,13 +48,14 @@ class RegisterViewController: UIViewController
             
             self.infoLabel.text = ""
             
-            self.apiRequestManager.register(self.emailField.text!, nickname: self.nicknameField.text!, password: self.passwordField.text!,
-                success: { (response) -> Void in
-                   self.infoLabel.text = "You are now registered"
-                }, failure: { (error, response) -> Void in
-                    self.infoLabel.text = self.printError(error, response: response)
-                    button.enabled = true
-            })
+            self.apiRequestManager.getUserManager().getAuthenticationManager()
+                .register(self.emailField.text!, nickname: self.nicknameField.text!, password: self.passwordField.text!,
+                    success: { (response) -> Void in
+                        self.infoLabel.text = "You are now registered"
+                    }, failure: { (error, response) -> Void in
+                        self.infoLabel.text = self.printError(error, response: response)
+                        button.enabled = true
+                })
         }
     }
     

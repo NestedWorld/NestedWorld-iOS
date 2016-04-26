@@ -43,17 +43,22 @@ class LoginViewController: UIViewController
         case "loginToHomePageSegue":
             if (self.checkParams()) {
                 self.buttonEnabled(false, register: false, resetPassword: false)
-                self.apiRequestManager.login(self.emailField.text!, password: self.passwordField.text!, data: nil,
-                    success: { (response) -> Void in
-                        print("Login Ok")
-                        self.performSegueWithIdentifier(identifier, sender: self)
-                    }, failure: { (error, response) -> Void in
-                        print("Login Fail")
-                        self.infoLabel.text = "Connection error"
-                        self.buttonEnabled(true, register: true, resetPassword: true)
-                })
+                
+                self.apiRequestManager.getUserManager().getAuthenticationManager()
+                    .login(self.emailField.text!, password: self.passwordField.text!, data: nil,
+                        success: { (response) -> Void in
+                            print("Login Ok")
+                            self.apiRequestManager.setToken(response!["token"] as! String)
+                            self.performSegueWithIdentifier(identifier, sender: self)
+                            
+                        }, failure: { (error, response) -> Void in
+                            print(response)
+                            self.infoLabel.text = "Connection error"
+                            self.buttonEnabled(true, register: true, resetPassword: true)
+                    })
             }
             return false
+            
         default:
             return true
         }

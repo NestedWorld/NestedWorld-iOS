@@ -41,13 +41,14 @@ class ResetPasswordViewController: UIViewController
         if (self.checkParams() == true) {
             let button = sender as! UIButton
             button.enabled = false
-            self.apiRequestManager.resetPassword(self.emailField.text!, success: { (response) -> Void in
-                self.infoLabel.text = "Success"
-                button.enabled = true
-                }, failure: { (error, response) -> Void in
-                    self.infoLabel.text = "Failure"
+            self.apiRequestManager.getUserManager().getAuthenticationManager()
+                .resetPassword(self.emailField.text!, success: { (response) -> Void in
+                    self.infoLabel.text = "Success"
                     button.enabled = true
-            })
+                    }, failure: { (error, response) -> Void in
+                        self.infoLabel.text = "Failure"
+                        button.enabled = true
+                })
         }
     }
     
