@@ -15,6 +15,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     @IBOutlet weak var mapView: MKMapView!
     
     private let locationManager: CLLocationManager = CLLocationManager()
+    var context: Context! = nil
     
     // MARK: Override functions
     
@@ -33,7 +34,7 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     }
     
     
-    // MARK: Private functions
+    // MARK: Location functions
     
     private func initLocation()
     {
@@ -48,8 +49,11 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation])
     {
-        print(manager.location?.coordinate)
+        // print(manager.location?.coordinate)
+        self.addPointToMap([manager.location!])
     }
+    
+    // MARK: Map functions
     
     private func initMapView()
     {
@@ -57,6 +61,46 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         self.mapView.showsUserLocation = true
         self.mapView.mapType = MKMapType(rawValue: 0)!
         self.mapView.userTrackingMode = MKUserTrackingMode(rawValue: 2)!
+    }
+    
+    private func addPointToMap(locations: [CLLocation!])
+    {
+        for loc in locations {
+            if (loc == nil) {
+                continue
+            }
+
+            let point = MKPointAnnotation()
+            point.coordinate = loc.coordinate
+            point.title = "Example point"
+            
+            self.mapView.addAnnotation(point)
+        }
+    }
+    
+    private func deletePointToMap(locations: [CLLocation!])
+    {
+        for loc in locations {
+            if (loc == nil) {
+                continue
+            }
+            
+            let point = MKPointAnnotation()
+            point.coordinate = loc.coordinate
+            
+            self.mapView.removeAnnotation(point)
+        }
+    }
+    
+    private func centerMapOnPoint(location: CLLocation!)
+    {
+        var loc: CLLocation! = location
+        
+        if (loc == nil) {
+            loc = self.locationManager.location
+        }
+        
+        self.mapView.setRegion(MKCoordinateRegionMakeWithDistance(loc.coordinate, 100, 100), animated: true)
     }
 
 }
