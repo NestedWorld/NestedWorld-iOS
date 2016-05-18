@@ -13,8 +13,9 @@ class HomePageViewController: UIViewController
     @IBOutlet weak var logoutButton: UIButton!
     @IBOutlet weak var monsterButton: UIButton!
     
+    var context: Context! = nil
+    
     var apiRequestManager: APIRequestManager!
-    var sessionUser: User!
     
     private var monsters: [Monster?] = [Monster]()
     
@@ -24,19 +25,17 @@ class HomePageViewController: UIViewController
     {
         super.viewDidLoad()
 
-        /*
-        self.apiRequestManager.getUserManager()
-            .userInfo(self.apiRequestManager.getToken(), success: { (response) -> Void in
+        self.context.getAPIRequestManager().getUserManager()
+            .profile(self.context.getAPIRequestManager().getToken(), success: { (response) -> Void in
                 let user: Dictionary<String, AnyObject> = response!["user"] as! Dictionary<String, AnyObject>
                 
-                self.sessionUser = User(email: user["email"] as! String, nickname: user["pseudo"] as! String,
+                self.context.user = User(email: user["email"] as! String, nickname: user["pseudo"] as! String,
                     gender: user["gender"] as? String, birthDate: user["birth_date"] as? String, city: user["city"] as? String,
                     background: user["background"] as? String, avatar: user["avatar"] as? String,
                     registerDate: user["registered_at"] as! String, isActive: user["is_active"] as! Bool)
                 }) { (error, response) -> Void in
                     print("User fail")
         }
-        */
     }
 
     // MARK: ...
@@ -61,8 +60,8 @@ class HomePageViewController: UIViewController
     
     private func homePageToLoginSegue(identifier: String, sender: AnyObject?) -> Bool
     {
-        self.apiRequestManager.getUserManager().getAuthenticationManager()
-            .logout(self.apiRequestManager.getToken(), success: { (response) -> Void in
+        self.context.getAPIRequestManager().getUserManager().getAuthenticationManager()
+            .logout(self.context.getAPIRequestManager().getToken(), success: { (response) -> Void in
                 self.apiRequestManager = nil
                 self.performSegueWithIdentifier(identifier, sender: sender)
                 
@@ -78,7 +77,7 @@ class HomePageViewController: UIViewController
     private func homePageToMonsterListSegue(identifier: String, sender: AnyObject?) -> Bool
     {
         self.buttonEnabled(false, monster: false)
-        self.apiRequestManager.getMonsterManager().list({ (response) -> Void in
+        self.context.getAPIRequestManager().getMonsterManager().list({ (response) -> Void in
             for monster in response!["monsters"] as! [AnyObject] {
                 self.monsters.append(Monster(name: monster["name"] as! String, attack: monster["attack"] as! UInt, defense: monster["defense"] as! UInt, hp: monster["hp"] as! UInt))
             }
@@ -98,6 +97,9 @@ class HomePageViewController: UIViewController
         case "homePageToMonsterListSegue":
             let next: MonsterTableViewController = segue.destinationViewController as! MonsterTableViewController
             next.monsters = self.monsters
+        case "homePageToMapSegue":
+            let next: MapViewController = segue.destinationViewController as! MapViewController
+            next.context = self.context
         default:
             break
         }

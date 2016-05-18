@@ -19,7 +19,7 @@ class LoginViewController: UIViewController
     @IBOutlet weak var resetPasswordButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     
-    private var apiRequestManager: APIRequestManager = APIRequestManager()
+    private var context: Context = Context()
     
     
     // MARK: Override functions
@@ -44,11 +44,11 @@ class LoginViewController: UIViewController
             if (self.checkParams()) {
                 self.buttonEnabled(false, register: false, resetPassword: false)
                 
-                self.apiRequestManager.getUserManager().getAuthenticationManager()
+                self.context.getAPIRequestManager().getUserManager().getAuthenticationManager()
                     .login(self.emailField.text!, password: self.passwordField.text!, data: nil,
                         success: { (response) -> Void in
                             print("Login Ok")
-                            self.apiRequestManager.setToken(response!["token"] as! String)
+                            self.context.getAPIRequestManager().setToken(response!["token"] as! String)
                             self.performSegueWithIdentifier(identifier, sender: self)
                             
                         }, failure: { (error, response) -> Void in
@@ -69,7 +69,7 @@ class LoginViewController: UIViewController
         switch segue.identifier! {
         case "loginToHomePageSegue":
             let next: HomePageViewController = segue.destinationViewController as! HomePageViewController
-            next.apiRequestManager = self.apiRequestManager
+            next.context = self.context
         default:
             break
         }

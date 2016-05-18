@@ -9,6 +9,7 @@
 class Context
 {
     private let apiRequestManager: APIRequestManager = APIRequestManager()
+    internal var user: User! = nil
     
     func getAPIRequestManager() -> APIRequestManager
     {
