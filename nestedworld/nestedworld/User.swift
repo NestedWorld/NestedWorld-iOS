@@ -53,7 +53,7 @@ class User
         self.email = email
         self.nickname = nickname
         
-        self.gender = self.nilToString(gender).toGender()
+        self.gender = self.nilToString(gender?.lowercaseString).toGender()
         self.birthday = self.nilToString(birthDate).toNSDate("yyyy-MM-dd'T'HH:mm:ss.SSSZ")
         self.city = city
         
