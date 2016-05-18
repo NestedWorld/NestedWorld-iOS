@@ -45,6 +45,8 @@
 		AD7C52E01CCF6A8300CBC913 /* UserNilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD7C52DF1CCF6A8300CBC913 /* UserNilTests.swift */; };
 		AD9E757F1C74C87400C2D482 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E757E1C74C87400C2D482 /* HomePageViewController.swift */; };
 		AD9E75801C74C87400C2D482 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD9E757E1C74C87400C2D482 /* HomePageViewController.swift */; };
+		ADD70B681CE73657002DC9BE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD70B671CE73657002DC9BE /* Friend.swift */; };
+		ADD70B691CE73657002DC9BE /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD70B671CE73657002DC9BE /* Friend.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +103,7 @@
 		AD7C52DD1CCF69EB00CBC913 /* UserTestsProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTestsProtocol.swift; sourceTree = "<group>"; };
 		AD7C52DF1CCF6A8300CBC913 /* UserNilTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserNilTests.swift; sourceTree = "<group>"; };
 		AD9E757E1C74C87400C2D482 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		ADD70B671CE73657002DC9BE /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
 		DDDC0CACD706CAEB8DCF9CBF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -265,6 +268,7 @@
 			isa = PBXGroup;
 			children = (
 				AD14CD921C747C9A00B44F5A /* User.swift */,
+				ADD70B671CE73657002DC9BE /* Friend.swift */,
 			);
 			name = User;
 			sourceTree = "<group>";
@@ -313,24 +317,8 @@
 		AD315C201C7F5F5C0083D6D7 /* User */ = {
 			isa = PBXGroup;
 			children = (
-				AD315C221C7F5F670083D6D7 /* Detail */,
-				AD315C211C7F5F610083D6D7 /* List */,
 			);
 			name = User;
-			sourceTree = "<group>";
-		};
-		AD315C211C7F5F610083D6D7 /* List */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = List;
-			sourceTree = "<group>";
-		};
-		AD315C221C7F5F670083D6D7 /* Detail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Detail;
 			sourceTree = "<group>";
 		};
 		AD3EB2761CCE79BB00E26A7B /* Module */ = {
@@ -594,6 +582,7 @@
 				AD14CD7B1C747A5200B44F5A /* LoginViewController.swift in Sources */,
 				AD14CD891C747C0C00B44F5A /* RegisterViewController.swift in Sources */,
 				AD3EB2751CCE73A600E26A7B /* APIUserRequestManager.swift in Sources */,
+				ADD70B681CE73657002DC9BE /* Friend.swift in Sources */,
 				AD14CD8C1C747C4500B44F5A /* ResetPasswordViewController.swift in Sources */,
 				AD14CD831C747AB500B44F5A /* AlamofireHttpRequestManager.swift in Sources */,
 				AD14CD931C747C9A00B44F5A /* User.swift in Sources */,
@@ -630,6 +619,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD14CD8A1C747C0C00B44F5A /* RegisterViewController.swift in Sources */,
+				ADD70B691CE73657002DC9BE /* Friend.swift in Sources */,
 				AD315C251C7F65C80083D6D7 /* MapViewController.swift in Sources */,
 				AD14CD7C1C747A5200B44F5A /* LoginViewController.swift in Sources */,
 				AD14CD6A1C747A0900B44F5A /* nestedworldUITests.swift in Sources */,
