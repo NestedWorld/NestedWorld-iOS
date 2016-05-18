@@ -24,7 +24,7 @@ class APIRequestManager
         }
     }
     
-    private let rootURL: APIRoot = .PROD
+    private let rootURL: APIRoot = .DEV
     private var sessionToken: String = ""
 
     private var userManager: APIUserRequestManager
