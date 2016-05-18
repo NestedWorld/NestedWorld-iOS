@@ -514,6 +514,23 @@
             </objects>
             <point key="canvasLocation" x="2812.5" y="1120.5"/>
         </scene>
+        <!--View Controller-->
+        <scene sceneID="zYc-9V-myH">
+            <objects>
+                <viewController id="dNf-ng-jkn" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CxF-1l-aZn"/>
+                        <viewControllerLayoutGuide type="bottom" id="BEf-gt-4Jb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p7h-lQ-20V">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="moF-nZ-qPe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2026.5" y="-344.25"/>
+        </scene>
         <!--Home Page View Controller-->
         <scene sceneID="zag-g3-acK">
             <objects>
@@ -547,13 +564,22 @@
                                     <segue destination="qJy-pI-Fnk" kind="show" identifier="homePageToMapSegue" id="IYC-MO-hdL"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tfc-9G-GaA">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" title="PROFILE"/>
+                                <connections>
+                                    <segue destination="dNf-ng-jkn" kind="show" identifier="homePageToProfileSegue" id="BQ4-C0-hX8"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="WwY-pd-mBN" firstAttribute="centerX" secondItem="k6z-e7-Rvt" secondAttribute="centerX" id="30Y-EL-yBY"/>
+                            <constraint firstItem="tfc-9G-GaA" firstAttribute="centerX" secondItem="k6z-e7-Rvt" secondAttribute="centerX" id="6T5-2Q-IET"/>
                             <constraint firstItem="WwY-pd-mBN" firstAttribute="centerY" secondItem="k6z-e7-Rvt" secondAttribute="centerY" id="JEi-nn-Znj"/>
                             <constraint firstItem="zF0-5H-500" firstAttribute="centerX" secondItem="k6z-e7-Rvt" secondAttribute="centerX" id="cP5-9r-EgN"/>
                             <constraint firstItem="tZo-Od-Ah6" firstAttribute="top" secondItem="WwY-pd-mBN" secondAttribute="bottom" constant="50" id="iN7-RG-aIh"/>
+                            <constraint firstItem="zF0-5H-500" firstAttribute="top" secondItem="tfc-9G-GaA" secondAttribute="bottom" constant="50" id="iQX-YP-cFj"/>
                             <constraint firstItem="WwY-pd-mBN" firstAttribute="top" secondItem="zF0-5H-500" secondAttribute="bottom" constant="50" id="q3C-CM-h9E"/>
                             <constraint firstItem="tZo-Od-Ah6" firstAttribute="centerX" secondItem="k6z-e7-Rvt" secondAttribute="centerX" id="t46-8y-snZ"/>
                         </constraints>
@@ -562,14 +588,17 @@
                                 <exclude reference="WwY-pd-mBN"/>
                                 <exclude reference="tZo-Od-Ah6"/>
                                 <exclude reference="zF0-5H-500"/>
+                                <exclude reference="tfc-9G-GaA"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6T5-2Q-IET"/>
+                                <exclude reference="cP5-9r-EgN"/>
+                                <exclude reference="iQX-YP-cFj"/>
                                 <exclude reference="30Y-EL-yBY"/>
                                 <exclude reference="JEi-nn-Znj"/>
                                 <exclude reference="q3C-CM-h9E"/>
                                 <exclude reference="iN7-RG-aIh"/>
                                 <exclude reference="t46-8y-snZ"/>
-                                <exclude reference="cP5-9r-EgN"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -577,14 +606,17 @@
                                 <include reference="WwY-pd-mBN"/>
                                 <include reference="tZo-Od-Ah6"/>
                                 <include reference="zF0-5H-500"/>
+                                <include reference="tfc-9G-GaA"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="6T5-2Q-IET"/>
+                                <include reference="cP5-9r-EgN"/>
+                                <include reference="iQX-YP-cFj"/>
                                 <include reference="30Y-EL-yBY"/>
                                 <include reference="JEi-nn-Znj"/>
                                 <include reference="q3C-CM-h9E"/>
                                 <include reference="iN7-RG-aIh"/>
                                 <include reference="t46-8y-snZ"/>
-                                <include reference="cP5-9r-EgN"/>
                             </mask>
                         </variation>
                     </view>
